@@ -6,7 +6,7 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 03:29:50 by khatlas           #+#    #+#             */
-/*   Updated: 2022/08/05 17:09:24 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/05 18:57:45 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 
 	if (argc < 2)
 		return (0);
-	else if (argc == 2 && !argv[2])
+	else if (argc == 2 && argv[1][0] == '\0')
 		return (0);
 	if (!parse_input(&stack, argv, argc))
 	{

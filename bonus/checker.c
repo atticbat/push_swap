@@ -6,7 +6,7 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 17:46:57 by khatlas           #+#    #+#             */
-/*   Updated: 2022/08/05 18:39:31 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/05 18:58:18 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	initialise(t_stacks *stack, char **argv, int argc)
 {
 	if (argc < 2)
 		return (0);
-	else if (argc == 2 && !argv[2])
+	else if (argc == 2 && argv[1][0] == '\0')
 		return (0);
 	if (!parse_input(stack, argv, argc))
 	{
