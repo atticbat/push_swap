@@ -6,7 +6,7 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 17:46:57 by khatlas           #+#    #+#             */
-/*   Updated: 2022/08/05 18:58:18 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/10 03:21:39 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(int argc, char **argv)
 		write(2, "Error\n", 6);
 		return (free_stacks(&stack));
 	}
-	if (check_sorted_a(stack.s[A].array, stack.s[A].end))
+	if (check_sorted_a(stack.s[A].array, stack.s[A].end) && stack.s[B].end == 0)
 		ft_printf("OK\n");
 	else
 		ft_printf("KO\n");

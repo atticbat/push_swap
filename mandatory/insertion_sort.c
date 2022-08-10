@@ -6,7 +6,7 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 23:29:37 by khatlas           #+#    #+#             */
-/*   Updated: 2022/07/17 10:30:18 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/10 03:17:56 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static void	insertion_operations(t_stacks *stack)
 {
-	int	i;
 	int	second_lowest_commit;
 
 	second_lowest_commit = 0;
@@ -77,8 +76,6 @@ static void	hardcode_two_operations(t_stacks *stack)
 
 void	insertion_sort(t_stacks *stack)
 {
-	int	i;
-
 	while (1)
 	{
 		hardcode_two_operations(stack);

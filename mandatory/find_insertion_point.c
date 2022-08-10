@@ -6,13 +6,13 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 06:31:09 by khatlas           #+#    #+#             */
-/*   Updated: 2022/07/30 13:43:44 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/10 03:19:35 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static int	case_insert_ends(t_stacks *stack, int idx)
+static int	case_insert_ends(t_stacks *stack)
 {
 	int	i;
 	int	j;
@@ -70,7 +70,7 @@ int	find_insertion_point(t_stacks *stack, int idx)
 	{
 		if (stack->s[A].array[stack->s[A].end - 1] == stack->start_number)
 			return (0);
-		return (case_insert_ends(stack, idx));
+		return (case_insert_ends(stack));
 	}
 	return (case_insert_between(stack, idx));
 }

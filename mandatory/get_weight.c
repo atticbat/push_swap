@@ -6,7 +6,7 @@
 /*   By: khatlas < khatlas@student.42heilbronn.d    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 09:07:32 by khatlas           #+#    #+#             */
-/*   Updated: 2022/08/01 21:23:58 by khatlas          ###   ########.fr       */
+/*   Updated: 2022/08/10 03:20:37 by khatlas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ static void	set_weight(t_stacks *stack, int **moves, int i)
 	}
 }
 
-static int	compare_weight(t_stacks *stack, int *moves, int *overlap, \
+static int	compare_weight(int *moves, int *overlap, \
 	int *len)
 {
-	if (moves[A] < 0 && moves[B] < 0 || \
-		moves[A] > 0 && moves[B] > 0)
+	if ((moves[A] < 0 && moves[B] < 0) || \
+		(moves[A] > 0 && moves[B] > 0))
 	{
 		if (ft_abs(moves[A]) > ft_abs(moves[B]))
 			*overlap = ft_abs(moves[B]);
@@ -62,7 +62,7 @@ int	get_weight(t_stacks *stack, int **moves, int *overlap)
 	while (i < stack->seek)
 	{
 		set_weight(stack, moves, i);
-		if (compare_weight(stack, moves[i], &overlap[i], &len))
+		if (compare_weight(moves[i], &overlap[i], &len))
 			best = i;
 		i++;
 	}
